@@ -1,0 +1,26 @@
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background: gray;
+  }
+  
+  select {
+    padding: 10px;
+    margin-top: 10px;
+  }

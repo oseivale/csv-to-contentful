@@ -1,0 +1,142 @@
+/* Dropdown.module.css */
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: 20px auto;
+    /* text-align: center; */
+  }
+  
+  .container {
+    max-height: 0; /* Start collapsed */
+    overflow: hidden;
+    transition: max-height 1.5s ease-out, opacity .5s ease-out;
+    opacity: 0;
+  }
+  
+  .container.show {
+    max-height: 500px; /* Adjust to a value large enough to fit your content */
+    opacity: 1;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .title strong {
+    color: red;
+  }
+
+  .label {
+    margin-right: 1rem;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .select:focus {
+    outline: none;
+    border-color: #007bff;
+    background: #fff;
+  }
+  
+  .button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 50px;
+  }
+
+  .hide {
+   display: none;
+  }
+  
+  .button:hover {
+    background: #0056b3;
+  }
+
+  .reload {
+    justify-self: center;
+    margin-top: 1rem;
+     width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 50px;
+    max-height: 0; /* Start collapsed */
+    overflow: hidden;
+    transition: max-height 1.5s ease-out, opacity .5s ease-out;
+    opacity: 0;
+  }
+
+  .reload:hover {
+    background: #0056b3;
+  }
+  
+  .reload.show {
+    max-height: 50px; /* Adjust to a value large enough to fit your content */
+    opacity: 1;
+  }
+
+
+  .button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .dropdown {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08); */
+    background: #fff;
+  }
+  
+  .dropdown:hover {
+    border-color: #007bff;
+  }
+  
+  .dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }

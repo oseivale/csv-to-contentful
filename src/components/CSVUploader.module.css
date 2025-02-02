@@ -1,80 +1,80 @@
 /* Container Styling */
 .container {
-    display: flex;
-    flex-direction: column;
-  
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-  }
-  
-  /* Header Styling */
-  h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 15px;
-    /* text-align: center; */
-  }
-  
-  /* File Input Styling */
-  input[type="file"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-    /* margin-bottom: 15px; */
-    font-size: 1.1rem;
-  }
-  
-  input[type="file"]:hover {
-    border-color: #007bff;
-  }
+  display: flex;
+  flex-direction: column;
 
-  .inputWrapper { 
-    /* flex-direction: row; */
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  /* File Name Display */
-  p {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 5px 0;
-    /* text-align: center; */
-    font-size: 1.1rem;
-  }
-  
-  /* Strong Text Styling */
-  p strong {
-    color: #007bff;
-    font-weight: bold;
-  }
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
 
-  /* CSVUploader.module.css */
+/* Header Styling */
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  /* text-align: center; */
+}
 
-  .infoWrapper {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    border: .5px solid #7dbff7;
-    background-color: #aecbe3;
-    border-radius: 5px;
-    padding: 1rem;
-  }
-  
-  /*
+/* File Input Styling */
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  /* margin-bottom: 15px; */
+  font-size: 1.1rem;
+}
+
+input[type="file"]:hover {
+  border-color: #007bff;
+}
+
+.inputWrapper {
+  /* flex-direction: row; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+/* File Name Display */
+p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+  /* text-align: center; */
+  font-size: 1.1rem;
+}
+
+/* Strong Text Styling */
+p strong {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* CSVUploader.module.css */
+
+.infoWrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border: 0.5px solid #7dbff7;
+  background-color: #aecbe3;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/*
   .infoWrapper {
     max-height: 0;
     overflow: hidden;
@@ -93,10 +93,9 @@
 }
 
 .instructions {
-  font-size: .95rem;
+  font-size: 0.95rem;
   line-height: 25px;
 }
-
 
 .title {
   font-size: 1.3rem;
@@ -144,7 +143,6 @@
   color: #007bff;
   font-weight: bold;
 }
-
 
 .uploadButton {
   display: inline-block;

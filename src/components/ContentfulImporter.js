@@ -1,16 +1,9 @@
 import React, { useState } from "react";
-import {
-  client,
-  convertToRichText,
-  createEntry,
-  stringToRichText,
-} from "../utils/contentfulAPI";
+import { client } from "../utils/contentfulAPI";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./ContentfulImporter.module.css";
-import { Completed, Loading } from "../icons/loading";
-// import { BLOCKS } from "@contentful/rich-text-types";
-import { htmlToText } from "html-to-text";
+import { Loading } from "../icons/loading";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { parseDocument, DomUtils } from "htmlparser2";
 // import * as DomUtils from "domutils";
@@ -25,7 +18,9 @@ const ContentfulImporter = ({
   const [isChecked, setIsChecked] = useState(false);
 
   const [progress, setProgress] = useState(0); // Percentage Progress (0-100)
+  // eslint-disable-next-line
   const [totalEntries, setTotalEntries] = useState(0);
+  // eslint-disable-next-line
   const [completedEntries, setCompletedEntries] = useState(0);
 
   const spaceId = process.env.REACT_APP_CONTENTFUL_SPACE_ID;
@@ -472,8 +467,14 @@ const ContentfulImporter = ({
             <div className={styles.loading}>
               <Loading progress={progress} />
               {/* <Completed /> */}
-              <button className={`${styles.reload}  ${progress === 100 ? styles.show : ""}`} onClick={handleReload}>Upload More Files</button>
-
+              <button
+                className={`${styles.reload}  ${
+                  progress === 100 ? styles.show : ""
+                }`}
+                onClick={handleReload}
+              >
+                Upload More Files
+              </button>
             </div>
           </>
         )}

@@ -3,13 +3,8 @@ import Papa from "papaparse";
 import styles from "./CSVUploader.module.css";
 import { Confirm } from "../icons/confirm";
 import { Info } from "../icons/info";
-import { client } from "../utils/contentfulAPI";
 
-const CSVUploader = ({
-  onCsvParsed,
-  setSelectedContentType,
-  selectedContentType,
-}) => {
+const CSVUploader = ({ onCsvParsed, setSelectedContentType }) => {
   const [csvHeaders, setCsvHeaders] = useState([]);
   const [fileName, setFileName] = useState("");
 

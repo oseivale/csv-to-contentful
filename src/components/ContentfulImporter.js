@@ -92,6 +92,36 @@ const ContentfulImporter = ({
             }
             break;
           }
+          case "ul":
+          case "ol": {
+            const isOrdered = node.name === "ol";
+
+            const listItems = await Promise.all(
+              (node.children || [])
+                .filter((child) => child.name === "li")
+                .map(async (liNode) => ({
+                  nodeType: BLOCKS.LIST_ITEM,
+                  data: {},
+                  content: await parseNodes(liNode.children || []), // Ensure it's an array
+                }))
+            );
+
+            blockElements.push({
+              nodeType: isOrdered ? BLOCKS.OL_LIST : BLOCKS.UL_LIST,
+              data: {},
+              content: listItems.length > 0 ? listItems : [], // Ensure it's an array
+            });
+            break;
+          }
+
+          case "li": {
+            blockElements.push({
+              nodeType: BLOCKS.LIST_ITEM,
+              data: {},
+              content: await parseNodes(node.children || []), // Ensure it's an array
+            });
+            break;
+          }
 
           case "a": {
             const containsImage = node.children.some(
@@ -146,7 +176,6 @@ const ContentfulImporter = ({
             }
             break;
           }
-
           default: {
             const textContent = DomUtils.textContent(node).trim();
             if (textContent) {

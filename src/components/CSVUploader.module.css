@@ -62,6 +62,14 @@ p strong {
   font-weight: bold;
 }
 
+sub {
+  line-height: 1px;
+}
+
+li {
+  margin: 1rem 0 0 0;
+}
+
 /* CSVUploader.module.css */
 
 .infoWrapper {
@@ -69,7 +77,7 @@ p strong {
   gap: 2rem;
   align-items: center;
   border: 0.5px solid #7dbff7;
-  background-color: #aecbe3;
+  background-color: #cae6fd;
   border-radius: 5px;
   padding: 1rem;
 }
